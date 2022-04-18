@@ -1,4 +1,7 @@
 package com.dji.sdk.sample.demo.lookat;
+
+import static com.google.android.gms.internal.zzahn.runOnUiThread;
+
 import android.app.AlertDialog;
 import android.app.Service;
 import android.content.Context;
@@ -52,8 +55,6 @@ import dji.sdk.gimbal.Gimbal;
 import dji.sdk.gimbal.mode.LookAtMode;
 import dji.sdk.products.Aircraft;
 import dji.sdk.sdkmanager.DJISDKManager;
-
-import static com.google.android.gms.internal.zzahn.runOnUiThread;
 
 public class LookAtMissionView extends LinearLayout implements View.OnClickListener, PresentableView {
 

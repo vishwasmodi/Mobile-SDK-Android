@@ -3,6 +3,7 @@ package com.dji.sdk.sample.internal.view;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -24,6 +25,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dji.sdk.sample.R;
 import com.dji.sdk.sample.demo.bluetooth.BluetoothView;
@@ -125,6 +127,7 @@ public class MainContent extends RelativeLayout {
     private AppActivationState.AppActivationStateListener appActivationStateListener;
     private boolean isregisterForLDM = false;
     private Context mContext;
+    private Button mBtnRazopay;
     public MainContent(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
@@ -153,8 +156,19 @@ public class MainContent extends RelativeLayout {
         mBridgeModeEditText = (EditText) findViewById(R.id.edittext_bridge_ip);
         mBtnBluetooth = (Button) findViewById(R.id.btn_bluetooth);
         mCheckboxFirmware = (CheckBox) findViewById(R.id.checkbox_firmware);
+        mBtnRazopay = (Button) findViewById(R.id.button3);
 
         //mBtnBluetooth.setEnabled(false);
+
+        mBtnRazopay.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.setResultToToast("Razorpay");
+                return;
+//                Intent intent = new Intent(mContext.getApplicationContext(), Razorpay.class);
+//                mContext.startActivity(intent);
+            }
+        });
 
 
         mBtnRegisterApp.setOnClickListener(new OnClickListener() {

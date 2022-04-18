@@ -132,7 +132,6 @@
     <string name="flight_controller_listview_networkRTK">Network RTK</string>
 
 
-
     <!-- Airlink list -->
     <string name="airlink_subtitle_wifi_airlink">WiFi Airlink</string>
     <string name="airlink_listview_wifi_set_get_ssid">Set/Get WiFi SSID</string>
@@ -360,5 +359,6 @@
     <string name="set_video_stream_source">Set Source</string>
     <string name="laser_enable">Laser Enabled</string>
     <string name="split_screen_display">Split Screen Display</string>
+    <string name="Razorpay">Testing</string>
 
 </resources>
